@@ -114,7 +114,7 @@
         id __autoreleasing object = nil;
 
         // Extract message argument into object (wrapping values if neccesary)
-        if (KWObjCTypeIsObject(objCType) || KWObjCTypeIsClass(objCType)) {
+        if (KWObjCTypeIsObject(objCType) || KWObjCTypeIsClass(objCType) || KWObjCTypeIsBridgedObject(objCType)) {
             [anInvocation getMessageArgument:&object atIndex:i];
         } else {
             NSData *data = [anInvocation messageArgumentDataAtIndex:i];

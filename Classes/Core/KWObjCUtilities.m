@@ -87,6 +87,9 @@ BOOL KWObjCTypeIsBlock(const char *objCType) {
     return strcmp(objCType, "@?") == 0;
 }
 
+BOOL KWObjCTypeIsBridgedObject(const char *objCType) {
+    return strcmp(objCType, "^v") == 0;
+}
 
 #pragma mark - Selector Utlities
 
